@@ -75,7 +75,6 @@ local function ray_cast_collision(vecConstruct, rayOrigin, rayDirection, raycast
 	local collison_force = Vector3.new(0,0,0)
 
 	if raycastResult then
-		-- if no ray then thats due to the rayDirection being wrong.
 		-- F = nkd - bn(n.v)
 		local relative_velocity = vecConstruct - raycastResult.Instance.Velocity
 		local ray_length = stud_metre_conversion*math.abs((rayOrigin - raycastResult.Position).magnitude-ball_radius)
